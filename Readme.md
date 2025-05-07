@@ -1,8 +1,5 @@
 Here's a README file you can use for your SHL Assessment Recommendation Engine:
 
-markdown
-Copy
-Edit
 # SHL Assessment Recommendation Engine
 
 This project provides a recommendation engine for SHL assessments based on job roles, industries, and seniority. It uses machine learning techniques such as cosine similarity and natural language processing (NLP) to match and recommend the most relevant assessments to users.
@@ -53,23 +50,15 @@ Before running the project, ensure you have the following installed:
    cd assessment-recommendation-engine
 Install dependencies:
 
-bash
-Copy
-Edit
 npm install
 Create a .env file at the root of the project and add the following content:
 
-bash
-Copy
-Edit
+
 MONGO_URI=your-mongo-uri-here
 Replace your-mongo-uri-here with the connection string provided by MongoDB Atlas.
 
 Run the application:
 
-bash
-Copy
-Edit
 npm start
 This will start the Express server on http://localhost:3000.
 
@@ -78,8 +67,7 @@ The engine provides an API to get assessment recommendations based on a user's i
 
 Request Body:
 json
-Copy
-Edit
+
 {
   "jobRole": "Software Engineer",
   "industry": "Tech",
@@ -89,8 +77,7 @@ Response:
 If successful, you'll get a response with the best match and other top recommendations:
 
 json
-Copy
-Edit
+
 {
   "bestMatch": {
     "AssessmentID": "SHL011",
@@ -110,18 +97,31 @@ Edit
 If no matching assessments are found, the response will include an error message:
 
 json
-Copy
-Edit
+
 {
   "error": "Your role is not found"
 }
 Example Request using curl:
 bash
-Copy
-Edit
 curl -X POST http://localhost:3000/recommendations \
   -H "Content-Type: application/json" \
   -d '{"jobRole": "Software Engineer", "industry": "Tech", "seniority": "Entry"}'
+API cheking through postman Application:
+POST http://localhost:5000/api/recommend – Get recommended assessments based on user input (send JSON body)
+{
+  "role": "Software Engineer",
+  "experience": "2 years",
+  "skills": ["JavaScript", "React", "Node.js"]
+}
+
+Response:
+json
+{
+  "recommended": [
+    "SHL Cognitive Assessment",
+    "SHL Technical Skills Test"
+  ]
+}
 Data Seeding
 To seed the database with initial assessment data, follow these steps:
 
@@ -132,8 +132,6 @@ Open the dataSeeder.js file.
 Run the script to insert sample data into the MongoDB database:
 
 bash
-Copy
-Edit
 node dataSeeder.js
 The script will connect to your MongoDB database, clear any existing data, and insert the predefined assessments.
 
