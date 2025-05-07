@@ -118,6 +118,7 @@ Response:
 json
 {
   "recommended": [
+  
     "SHL Cognitive Assessment",
     "SHL Technical Skills Test"
   ]
@@ -135,8 +136,6 @@ bash
 node dataSeeder.js
 The script will connect to your MongoDB database, clear any existing data, and insert the predefined assessments.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 Feel free to contribute or modify the code to suit your needs!
 
