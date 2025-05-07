@@ -12,7 +12,13 @@ This project provides a recommendation engine for SHL assessments based on job r
 5. [API Usage](#api-usage)
 6. [Data Seeding](#data-seeding)
 7. [Output](#output)
-   ![Game Board](frontend/src/assets/board.png)
+<p align="center">
+  <img src="frontend/assets/WhatsApp Image 2025-05-07 at 16.14.25_a87f8a9e.jpg" width="300" />
+  <img src="frontend/assets/WhatsApp Image 2025-05-07 at 16.14.26_80361555.jpg" width="300" />
+  <img src="frontend/assets/WhatsApp Image 2025-05-07 at 16.14.27_33fdaca9.jpg" width="300" />
+</p>
+
+
 
 
 ## Project Overview
