@@ -11,7 +11,7 @@ This project provides a recommendation engine for SHL assessments based on job r
 4. [Setup Instructions](#setup-instructions)
 5. [API Usage](#api-usage)
 6. [Data Seeding](#data-seeding)
-7. [License](#license)
+7. [Output](#output)
 
 ## Project Overview
 
