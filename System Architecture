@@ -1,0 +1,99 @@
+The System Architecture for the SHL Assessment Recommendation Engine. This diagram outlines the flow of data between different components, helping in understanding how the system works end-to-end.
+
+System Architecture Overview:
+
+                            +---------------------+
+                            |      User Interface |
+                            |    (Web/Frontend)   |
+                            |  - Input job role   |
+                            |  - Input industry   |
+                            |  - Input seniority  |
+                            |  - View recommendations |
+                            +---------+-----------+
+                                    |
+                                    V
+                            +---------------------+
+                            |    Express.js API   |  
+                            |  (Backend Server)   |
+                            |  - Handle requests  |
+                            |  - API Routes       |
+                            +---------+-----------+
+                                    |
+                                    V
+                            +---------------------+
+                            |    Recommendation   |  
+                            |    Engine Logic     |  
+                            |  - Cosine similarity|
+                            |  - String matching  |
+                            |  - NLP processing   |
+                            +---------+-----------+
+                                    |
+                                    V
+                            +---------------------+
+                            |      Database       |
+                            |    (MongoDB Atlas)  |
+                            |  - Store assessments|
+                            |  - Store user queries|
+                            +---------+-----------+
+                                    |
+                                    V
+                            +---------------------+
+                            |     MongoDB Atlas   |
+                            |  - Data Storage     |
+                            |  - Assessment data  |
+                            |  - Query data       |
+                            +---------------------+
+Description of Components:
+User Interface (Frontend):
+
+The frontend can be a simple web interface where the user enters their job role, industry, and seniority level.
+
+It communicates with the backend API to get assessment recommendations based on the inputs.
+
+Express.js API (Backend Server):
+
+This handles incoming HTTP requests from the frontend.
+
+It receives user data (job role, industry, and seniority) and processes it by sending it to the recommendation engine.
+
+It serves as a middle layer between the frontend and the database.
+
+Recommendation Engine Logic:
+
+The recommendation engine performs the core logic of the application, using techniques like:
+
+Cosine Similarity: To match the job role with the most relevant assessments.
+
+String Matching (Jaro-Winkler distance): To calculate similarity between input roles and assessments.
+
+NLP Techniques: Used for processing and comparing textual data.
+
+MongoDB Atlas (Database):
+
+Stores the assessments data.
+
+It is a NoSQL cloud-based database (MongoDB Atlas) where all assessments and related metadata are stored.
+
+User queries can be stored here for analytics and further optimization of the recommendation engine.
+
+Data Flow:
+User Input: The user provides their job role, industry, and seniority through the frontend.
+
+API Request: The frontend sends a request to the Express.js backend with the user's data.
+
+Recommendation Logic: The backend processes the request using the recommendation engine, which fetches data from the database and processes it to generate suitable assessments.
+
+Database Interaction: The backend retrieves the assessments from the database (MongoDB Atlas) and uses the engine logic to filter and sort assessments based on the user's inputs.
+
+Response: The backend sends the recommendations back to the frontend to be displayed to the user.
+
+Tools and Technologies:
+Frontend: React.js (for UI rendering)
+
+Backend: Node.js, Express.js (handling API requests)
+
+Database: MongoDB Atlas (cloud storage for assessments data)
+
+NLP Libraries: natural for text processing and similarity calculation
+
+Similarity Calculation: compute-cosine-similarity, Jaro-Winkler distance

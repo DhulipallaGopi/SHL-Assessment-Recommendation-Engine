@@ -1,0 +1,9 @@
+# Ignore .env file
+backend/.env
+
+# Node.js dependencies
+**/node_modules
+
+# Build and dist folders
+**/build
+**/dist
