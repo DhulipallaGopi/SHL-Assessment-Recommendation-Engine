@@ -233,18 +233,18 @@ mongoose.connect(mongoURI, {
   useUnifiedTopology: true
 })
 .then(async () => {
-  console.log('✅ Connected to MongoDB');
+  console.log('Connected to MongoDB');
 
   try {
     await Assessment.deleteMany({});
-    console.log('🧹 Old data cleared');
+    console.log(' Old data cleared');
 
     await Assessment.insertMany(assessments);
-    console.log('🌱 All data seeded successfully');
+    console.log(' All data seeded successfully');
   } catch (err) {
-    console.error('❌ Seeding failed:', err);
+    console.error(' Seeding failed:', err);
   } finally {
     mongoose.connection.close();
   }
 })
-.catch(err => console.error('❌ MongoDB connection error:', err));
+.catch(err => console.error(' MongoDB connection error:', err));
