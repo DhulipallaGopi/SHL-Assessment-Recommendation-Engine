@@ -12,6 +12,8 @@ This project provides a recommendation engine for SHL assessments based on job r
 5. [API Usage](#api-usage)
 6. [Data Seeding](#data-seeding)
 7. [Output](#output)
+   ![Game Board](frontend/src/assets/board.png)
+
 
 ## Project Overview
 
