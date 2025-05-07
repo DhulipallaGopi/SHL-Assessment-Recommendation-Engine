@@ -7,11 +7,11 @@ This project provides a recommendation engine for SHL assessments based on job r
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
-2. [Tech Stack](#tech-stack)
-3. [Setup Instructions](#setup-instructions)
-4. [API Usage](#api-usage)
-5. [Data Seeding](#data-seeding)
-6. [License](#license)
+3. [Tech Stack](#tech-stack)
+4. [Setup Instructions](#setup-instructions)
+5. [API Usage](#api-usage)
+6. [Data Seeding](#data-seeding)
+7. [License](#license)
 
 ## Project Overview
 
@@ -73,6 +73,7 @@ json
   "industry": "Tech",
   "seniority": "Entry"
 }
+
 Response:
 If successful, you'll get a response with the best match and other top recommendations:
 
@@ -91,6 +92,7 @@ json
     "Seniority": "Entry"
   },
   "recommendations": [
+  
     // Additional recommended assessments
   ]
 }
@@ -106,12 +108,13 @@ bash
 curl -X POST http://localhost:3000/recommendations \
   -H "Content-Type: application/json" \
   -d '{"jobRole": "Software Engineer", "industry": "Tech", "seniority": "Entry"}'
+  
 API cheking through postman Application:
 POST http://localhost:5000/api/recommend – Get recommended assessments based on user input (send JSON body)
 {
   "role": "Software Engineer",
   "experience": "2 years",
-  "skills": ["JavaScript", "React", "Node.js"]
+  "skills": ["JavaScript","React", "Node.js"]
 }
 
 Response:
