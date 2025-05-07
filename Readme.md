@@ -12,12 +12,13 @@ This project provides a recommendation engine for SHL assessments based on job r
 5. [API Usage](#api-usage)
 6. [Data Seeding](#data-seeding)
 7. [Output](#output)
-<p align="center">
-  <img src="frontend/assets/Image1.jpg" width="300" />
-  <img src="frontend/assets/Image2.jpg" width="300" />
-  <img src="frontend/assets/Image3.jpg" width="300" />
-  <img src="frontend/assets/Image4.jpg" width="300" />
-</p>
+### Screenshots
+
+![Image1](frontend/src/assets/Image1.jpg)
+![Image2](frontend/src/assets/Image2.jpg)
+![Image3](frontend/src/assets/Image3.jpg)
+![Image4](frontend/src/assets/Image4.jpg)
+
 
 
 
